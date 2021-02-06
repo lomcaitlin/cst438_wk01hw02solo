@@ -40,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getDisplayValues();
                 if (validateLogin()) {
-                    Intent intent = new Intent(MainActivity.this, LandingActivity.class);
-                    intent.putExtra("userId", loggedIn.getId());
-                    intent.putExtra("username", loggedIn.getUsername());
+                    Intent intent = LandingActivity.getIntent(getApplicationContext(), loggedIn.getUsername(), loggedIn.getId());
                     startActivity(intent);
                 }
             }

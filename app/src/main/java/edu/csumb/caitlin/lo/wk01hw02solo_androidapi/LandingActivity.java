@@ -2,6 +2,8 @@ package edu.csumb.caitlin.lo.wk01hw02solo_androidapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -77,5 +79,19 @@ public class LandingActivity extends AppCompatActivity {
             username = extras.getString("username");
             userId = extras.getInt("userId");
         }
+    }
+
+    /**
+     * Intent factory
+     * @param context
+     * @param username
+     * @param userId
+     * @return
+     */
+    public static Intent getIntent(Context context, String username, int userId) {
+        Intent intent = new Intent(context, LandingActivity.class);
+        intent.putExtra("username", username);
+        intent.putExtra("userId", userId);
+        return intent;
     }
 }
