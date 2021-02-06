@@ -26,9 +26,4 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("edu.csumb.caitlin.lo.wk01hw02solo_androidapi", appContext.getPackageName());
     }
-
-    @Test
-    public void testUsers() {
-
-    }
 }
